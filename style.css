@@ -1,0 +1,258 @@
+/* === GERAL === */
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main.container {
+    flex: 1;
+    padding-top: 20px;
+}
+
+/* === PÁGINA DE LOGIN === */
+.login-bg {
+    background: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA7fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+}
+
+.login-card .logo {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 20px;
+}
+
+.btn-login {
+    background: #1e3c72;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    width: 100%;
+    color: white;
+}
+
+.btn-login:hover {
+    background: #2a5298;
+}
+
+.forgot-password {
+    color: #1e3c72;
+    text-decoration: underline;
+}
+
+.forgot-password:hover {
+    color: #2a5298;
+}
+
+.form-label {
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 576px) {
+    .login-card {
+        padding: 20px;
+    }
+
+    .login-card .logo {
+        max-width: 150px;
+    }
+
+    .btn-login {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .login-card {
+        padding: 15px;
+    }
+
+    .login-card .logo {
+        max-width: 120px;
+    }
+}
+
+/* === BOTÕES E CORES PERSONALIZADAS === */
+.btn-outline-purple {
+    border-color: #9333ea;
+    color: #9333ea;
+}
+
+.btn-outline-purple:hover {
+    background-color: #9333ea;
+    color: white;
+    border-color: #9333ea;
+}
+
+.btn-outline-success {
+    border-color: #16a34a;
+    color: #16a34a;
+}
+
+.btn-outline-success:hover {
+    background-color: #16a34a;
+    color: white;
+    border-color: #16a34a;
+}
+
+.btn-outline-warning {
+    border-color: #f59e0b;
+    color: #f59e0b;
+}
+
+.btn-outline-warning:hover {
+    background-color: #f59e0b;
+    color: white;
+    border-color: #f59e0b;
+}
+
+.btn-purple {
+    background-color: #9333ea;
+    color: white;
+}
+
+.btn-purple:hover {
+    background-color: #7e22ce;
+    color: white;
+}
+
+/* === ALERTAS === */
+.alert {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+}
+
+.badge {
+    font-weight: 600;
+}
+
+/* === CARDS === */
+.card {
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 160px;
+    object-fit: cover;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+/* === CALENDÁRIO === */
+.flatpickr-day.dia-disponivel {
+    background-color: #28a745 !important;
+    color: white;
+    border-radius: 50%;
+}
+
+.flatpickr-day.dia-agendado {
+    background-color: #6c757d !important;
+    color: white;
+    border-radius: 50%;
+}
+
+.flatpickr-day {
+    transition: all 0.2s ease-in-out;
+}
+
+.flatpickr-day:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* === EDITAR MEMBRO === */
+#foto_atual_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#foto_atual_img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.preview-container,
+.progress-container {
+    display: none;
+    margin-top: 15px;
+}
+
+/* === RODAPÉ === */
+footer.bg-dark {
+    margin-top: auto;
+    padding: 1.5rem 0;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #adb5bd;
+    text-align: center;
+    margin: 0;
+}
+
+/* === DROPDOWN === */
+header.bg-primary {
+    position: relative;
+    z-index: 3000 !important;
+}
+
+
+nav.bg-secondary {
+    position: sticky;
+    top: 0;
+}
+
+.dropdown-menu {
+    z-index: 9999 !important;
+    position: absolute !important;
+}
+
+.dropdown-toggle {
+    position: relative !important;
+}
